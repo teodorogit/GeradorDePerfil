@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletor de idade</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            width: 600px;
+            height: 490px;
+            background-image: linear-gradient(to bottom, rgb(250, 146, 206) ,rgb(201, 103, 103), rgba(81, 81, 226, 0.699));
+            margin:auto;
+            border-radius: 30px;
+            padding: 10px;
+            margin-top: 250px;
+        }
+        .dados > h1 {
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            box-shadow:  5px 2px 2px rgba(0, 0, 0, 0.555);
+            font-size: 20px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        #verificar {
+            background-image: linear-gradient(to right, rgba(131, 75, 219, 0.575), rgba(73, 198, 230, 0.76));
+            border-radius: 55px;
+            padding: 8px;
+            margin-left: 30%;
+            width: 200px;
+        }
+      
+        .dados > p {
+            font-size: 16px;
+            font-weight: 400px;
+
+        }
+
+        .footer > p {
+            text-align: center;
+            font-style: italic;
+            font-size: 14px;
+        }
+
+    
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="dados">  
+        <h1>Gerador de imagem baseado nos dados do usuário</h1>
+        <p>Ano de nascimento
+        <input type="number" name="txtano" id="idade" min="0"></p>
+        <p>Sexo
+            <input type="radio" name="radsex" id="mas" checked>
+            <label for="masc">Masculino</label>  
+            <input type="radio" name="radsex" id="fem">
+            <label for="fem">Feminino</label></p>
+        <p>Voce se considera com que tom de pele?
+            <input type="radio" name="cor" id="cor" checked>
+            <label for="cor">Branca</label>
+            <input type="radio" name="cor" id="cor">
+            <label for="cord">Pardo</label>
+
+    </p>
+    <p>
+        <button id="verificar" onclick="verificar()">Verificar Perfil</button>
+    </p>
+    </div>
+    <div id="resultado">
+        <p>Preencha os dados acima para que o sistema possa encontrar um perfil que seja parecido com você </p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
